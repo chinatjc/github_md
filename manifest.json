@@ -1,0 +1,32 @@
+{
+	"name": "github_md",
+	"version": "1.0",
+	"manifest_version": 2,
+	"description": "markdown 2 html, Github风格",
+	"permissions": [
+        "webRequest", // web请求
+        "webRequestBlocking",
+        "storage", // 插件本地存储
+        "http://*/*", // 可以通过executeScript或者insertCSS访问的网站
+        "https://*/*" // 可以通过executeScript或者insertCSS访问的网站
+    ],
+    "homepage_url": "https://www.baidu.com",
+	"icons": {
+		"128": "images/markdown_128.png"
+	},
+	"browser_action": {
+		"default_icon": "images/markdown_128.png",
+        "default_title": "github_md setup menu",
+		"default_popup": "popup.html"
+	},
+	"content_scripts": [{
+      "matches": ["file:///*/*.md", "http://*/*.md", "https://*/*.md"],
+      "exclude_matches": ["*://github.com/*/*.md"],
+      "js": ["js/content.js"],
+      "css": ["css/content.css"],
+      "run_at": "document_end"
+    }],
+    "background": {
+        "scripts": ["js/background.js"]
+    }
+}

@@ -17,7 +17,7 @@ Markdown 文档解析器，预览md文件
 
 * 安装 [Chrome 插件—github_md](http://www.baidu.com)
 * 需要给md文件开启服务器环境（非服务器环境下，无法watch md文件的改变)
-* 需要在 github_md 插件的[设置菜单](#设置菜单)中填写 GitHub token（[获取GitHub token](http://www.baidu.com)），否则每小时只能解析md文件```60```次
+* 需要在 github_md 插件的[设置菜单](#设置菜单)中填写 GitHub token（[获取GitHub token](#获取 GitHub token)），否则每小时只能解析md文件```60```次
 * 在 Chrome浏览器 中打开 md文件 的URL，即可看到解析后的Markdown
 * 若想关闭插件解析Markdown，可在设置菜单里去掉 ```enable``` 勾选项
 
